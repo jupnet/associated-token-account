@@ -1,16 +1,13 @@
 //! Account utility functions
 
 use {
-    solana_program::{
-        account_info::AccountInfo,
-        entrypoint::ProgramResult,
-        program::{get_return_data, invoke, invoke_signed},
-        program_error::ProgramError,
-        pubkey::Pubkey,
-        rent::Rent,
-        system_instruction,
-    },
-    spl_token_2022::extension::ExtensionType,
+    solana_account_info::AccountInfo,
+    solana_cpi::{get_return_data, invoke, invoke_signed},
+    solana_program_error::{ProgramError, ProgramResult},
+    solana_pubkey::Pubkey,
+    solana_rent::Rent,
+    solana_system_interface::instruction as system_instruction,
+    spl_token_2022_interface::extension::ExtensionType,
     std::convert::TryInto,
 };
 
@@ -80,7 +77,7 @@ pub fn get_account_len<'a>(
     extension_types: &[ExtensionType],
 ) -> Result<usize, ProgramError> {
     invoke(
-        &spl_token_2022::instruction::get_account_data_size(
+        &spl_token_2022_interface::instruction::get_account_data_size(
             spl_token_program.key,
             mint.key,
             extension_types,
