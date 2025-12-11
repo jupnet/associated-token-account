@@ -15,20 +15,20 @@ test-sbf = []
 borsh = "1.6.0"
 num-derive = "0.4"
 num-traits = "0.2"
-solana-account-info = "3.1"
-solana-cpi = "3.1"
-solana-instruction = "3.1"
-solana-msg = "3.0"
-solana-program-entrypoint = "3.1"
-solana-program-error = "3.0"
-solana-pubkey = "4.0"
-solana-rent = "3.1"
-solana-sdk-ids = "3.1"
-solana-system-interface = { version = "3.0", features = ["bincode"] }
-solana-sysvar = "3.1"
+solana-account-info = { git = "https://github.com/jupnet/jupnet-sdk" }
+solana-cpi = { git = "https://github.com/jupnet/jupnet-sdk" }
+solana-instruction = { git = "https://github.com/jupnet/jupnet-sdk" }
+solana-msg = { git = "https://github.com/jupnet/jupnet-sdk" }
+solana-program-entrypoint = { git = "https://github.com/jupnet/jupnet-sdk" }
+solana-program-error = { git = "https://github.com/jupnet/jupnet-sdk" }
+solana-pubkey = { git = "https://github.com/jupnet/jupnet-sdk" }
+solana-rent = { git = "https://github.com/jupnet/jupnet-sdk" }
+solana-sdk-ids = { git = "https://github.com/jupnet/jupnet-sdk" }
+solana-system-interface = { git = "https://github.com/jupnet/jupnet-sdk", features = ["bincode"] }
+solana-sysvar = { git = "https://github.com/jupnet/jupnet-sdk" }
 spl-associated-token-account-interface = { version = "2.0.0", path = "../interface", features = ["borsh"] }
-spl-token-interface = "2.0.0"
-spl-token-2022-interface = "2.1.0"
+spl-token-interface = { git = "https://github.com/jupnet/token", branch = "jupnet" }
+spl-token-2022-interface = { git = "https://github.com/jupnet/token-2022", branch = "jupnet" }
 thiserror = "2.0"
 
 [dev-dependencies]
