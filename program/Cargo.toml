@@ -29,7 +29,7 @@ solana-sysvar = { git = "https://github.com/jupnet/jupnet-sdk" }
 spl-associated-token-account-interface = { version = "2.0.0", path = "../interface", features = ["borsh"] }
 spl-token-interface = { git = "https://github.com/jupnet/token", branch = "jupnet" }
 spl-token-2022-interface = { git = "https://github.com/jupnet/token-2022", branch = "jupnet" }
-thiserror = "2.0"
+thiserror = "^2.0"
 
 [dev-dependencies]
 spl-associated-token-account-mollusk-harness = { version = "1.0.0", path = "../mollusk_harness" }
