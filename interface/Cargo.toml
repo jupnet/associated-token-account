@@ -12,11 +12,11 @@ borsh = ["dep:borsh"]
 
 [dependencies]
 borsh = { version = "1", optional = true, features = ["unstable__schema"] }
-solana-instruction = { git = "https://github.com/jupnet/jupnet-sdk", features = ["std"] }
-solana-pubkey = { git = "https://github.com/jupnet/jupnet-sdk", features = ["curve25519"] }
+solana-instruction = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps", features = ["std"] }
+solana-pubkey = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps", features = ["curve25519"] }
 
 [dev-dependencies]
-solana-sdk-ids = { git = "https://github.com/jupnet/jupnet-sdk" }
+solana-sdk-ids = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps" }
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
