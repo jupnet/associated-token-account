@@ -15,25 +15,25 @@ test-sbf = []
 borsh = "1.6.0"
 num-derive = "0.4"
 num-traits = "0.2"
-solana-account-info = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps" }
-solana-cpi = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps" }
-solana-instruction = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps" }
-solana-msg = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps" }
-solana-program-entrypoint = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps" }
-solana-program-error = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps" }
-solana-pubkey = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps" }
-solana-rent = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps" }
-solana-sdk-ids = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps" }
-solana-system-interface = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps", features = ["bincode"] }
-solana-sysvar = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps" }
+solana-account-info = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps-test" }
+solana-cpi = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps-test" }
+solana-instruction = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps-test" }
+solana-msg = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps-test" }
+solana-program-entrypoint = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps-test" }
+solana-program-error = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps-test" }
+solana-pubkey = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps-test" }
+solana-rent = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps-test" }
+solana-sdk-ids = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps-test" }
+solana-system-interface = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps-test", features = ["bincode"] }
+solana-sysvar = { git = "https://github.com/jupnet/jupnet-sdk", branch = "fix/sdk-deps-test" }
 spl-associated-token-account-interface = { version = "2.0.0", path = "../interface", features = ["borsh"] }
-spl-token-interface = { git = "https://github.com/jupnet/token", branch = "fix/sdk-deps" }
-spl-token-2022-interface = { git = "https://github.com/jupnet/token-2022", branch = "fix/sdk-deps" }
+spl-token-interface = { git = "https://github.com/jupnet/token", branch = "fix/sdk-deps-test" }
+spl-token-2022-interface = { git = "https://github.com/jupnet/token-2022", branch = "fix/sdk-deps-test" }
 thiserror = "^2.0"
 
 [dev-dependencies]
 spl-associated-token-account-mollusk-harness = { version = "1.0.0", path = "../mollusk_harness" }
-mollusk-svm = { version = "0.7.2" }
+mollusk-svm = { version = "0.8.1" }
 solana-keypair = "3.1"
 solana-signer = "3.0"
 

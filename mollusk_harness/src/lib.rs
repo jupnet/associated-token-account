@@ -1,5 +1,5 @@
 use {
-    mollusk_svm::{program::loader_keys::LOADER_V3, result::Check, Mollusk, MolluskContext},
+    mollusk_svm::{result::Check, Mollusk, MolluskContext},
     solana_account::Account,
     solana_instruction::{AccountMeta, Instruction},
     solana_program_error::ProgramError,
@@ -21,9 +21,9 @@ pub fn setup_mollusk_with_programs(token_program_id: &Pubkey) -> Mollusk {
     let mut mollusk = Mollusk::new(&ata_program_id, "spl_associated_token_account");
 
     if *token_program_id == spl_token_2022_interface::id() {
-        mollusk.add_program(token_program_id, "spl_token_2022", &LOADER_V3);
+        mollusk.add_program(token_program_id, "spl_token_2022");
     } else {
-        mollusk.add_program(token_program_id, "pinocchio_token_program", &LOADER_V3);
+        mollusk.add_program(token_program_id, "pinocchio_token_program");
     }
 
     mollusk
@@ -193,7 +193,7 @@ impl AtaTestHarness {
             Some(&mint_authority),
             Some(&mint_authority),
             transfer_fee_basis_points,
-            maximum_fee,
+            maximum_fee.into(),
         )
         .expect("Failed to create initialize_transfer_fee_config instruction");
 
@@ -276,7 +276,7 @@ impl AtaTestHarness {
             &destination,
             mint_authority,
             &[],
-            amount,
+            amount.into(),
         )
         .unwrap();
 

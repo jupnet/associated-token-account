@@ -39,9 +39,9 @@ fn test_associated_token_account_with_transfer_fees() {
             &receiver_ata,
             &sender_pubkey,
             &[],
-            10_001,
+            10_001_u64.into(),
             0,
-            maximum_fee,
+            maximum_fee.into(),
         )
         .unwrap(),
         &[Check::err(ProgramError::Custom(
@@ -59,9 +59,9 @@ fn test_associated_token_account_with_transfer_fees() {
             &receiver_ata,
             &sender_pubkey,
             &[],
-            transfer_amount,
+            transfer_amount.into(),
             0,
-            fee,
+            fee.into(),
         )
         .unwrap(),
         &[Check::success()],

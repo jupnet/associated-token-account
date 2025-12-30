@@ -275,7 +275,7 @@ pub fn process_recover_nested(program_id: &Pubkey, accounts: &[AccountInfo]) -> 
             destination_associated_token_account_info.key,
             owner_associated_token_account_info.key,
             &[],
-            amount,
+            amount.into(),
             decimals,
         )?,
         &[

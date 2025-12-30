@@ -11,8 +11,8 @@ edition = "2021"
 crate-type = ["lib"]
 
 [dependencies]
-mollusk-svm = { version = "0.7.2" }
-mollusk-svm-programs-token = { version = "0.7.2" }
+mollusk-svm = { version = "0.8.1" }
+mollusk-svm-programs-token = { version = "0.8.1" }
 solana-account = "3.2"
 solana-instruction = "3.1"
 solana-keypair = "3.0"
